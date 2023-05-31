@@ -10,7 +10,7 @@ go install github.com/ktr0731/evans@latest (debug)
 
 export PATH="$PATH:$(go env GOPATH)/bin"
 protoc -I=$PWD --go_out=$PWD --go-grpc_out=$PWD $PWD/proto/myapp.proto
-```
+``` 
 
 ## build and run server
 ```
@@ -26,4 +26,13 @@ go run ./cmd/client/main.go 5 9
 ## run evans
 ```
 evans proto/myapp.proto -p 8090
+call Sum
+
+
+x (TYPE_INT32) => 12
+y (TYPE_INT32) => 13
+{
+  "result": 25
+}
+
 ```
